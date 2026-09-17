@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ERK TECH - Identidad Visual</title>
+
+    <link rel="stylesheet" href="css/tokens.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--superficie);
+            color: var(--texto);
+            padding: 40px 20px;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .introduccion {
+            text-align: center;
+            color: var(--texto-tenue);
+            margin-bottom: 50px;
+        }
+
+        /* =====================
+           2.1 IDENTIDAD VISUAL
+        ===================== */
+
+        .identidad {
+            background: var(--superficie-alta);
+            border: 1px solid var(--borde);
+            border-radius: 14px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .identidad img {
+            width: 180px;
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .identidad p {
+            color: var(--texto-tenue);
+        }
+
+        /* =====================
+           2.2 PALETA
+        ===================== */
+
+        .seccion {
+            margin-bottom: 60px;
+        }
+
+        .seccion h2 {
+            margin-bottom: 10px;
+        }
+
+        .descripcion {
+            color: var(--texto-tenue);
+            margin-bottom: 25px;
+        }
+
+        .paleta {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .color {
+            background: var(--superficie-alta);
+            border: 1px solid var(--borde);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .muestra {
+            height: 90px;
+        }
+
+        .informacion {
+            padding: 15px;
+        }
+
+        .informacion h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .hex {
+            color: var(--color-acento);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .uso {
+            color: var(--texto-tenue);
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* =====================
+           2.3 REGLA 60-30-10
+        ===================== */
+
+        .barra {
+            display: flex;
+            width: 100%;
+            height: 140px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--borde);
+        }
+
+        .sesenta {
+            width: 60%;
+            background: var(--superficie);
+        }
+
+        .treinta {
+            width: 30%;
+            background: var(--superficie-alta);
+        }
+
+        .diez {
+            width: 10%;
+            min-width: 100px;
+            background: var(--color-marca);
+        }
+
+        .bloque {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .bloque strong {
+            font-size: 32px;
+        }
+
+        .bloque span {
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* =====================
+           2.4 VARIABLES
+        ===================== */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--superficie-alta);
+            border: 1px solid var(--borde);
+        }
+
+        th,
+        td {
+            padding: 13px;
+            text-align: left;
+            border-bottom: 1px solid var(--borde);
+        }
+
+        th {
+            color: var(--color-acento);
+        }
+
+        td {
+            color: var(--texto-tenue);
+        }
+
+        code {
+            color: var(--color-acento);
+        }
+
+        /* =====================
+           2.6 CONTRASTE
+        ===================== */
+
+        .contraste {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .contraste-card {
+            background: var(--superficie-alta);
+            border: 1px solid var(--borde);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .ejemplo {
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .blanco {
+            color: #FFFFFF;
+        }
+
+        .gris {
+            color: #C7D0D9;
+        }
+
+        .oscuro {
+            color: #0B0F14;
+        }
+
+        .fondo-oscuro {
+            background: #0B0F14;
+        }
+
+        .fondo-marca {
+            background: #0066FF;
+        }
+
+        .fondo-accion {
+            background: #008CFF;
+        }
+
+        .fondo-error {
+            background: #D32F2F;
+        }
+
+        .fondo-claro {
+            background: #DCEBFF;
+        }
+
+        .datos {
+            padding: 15px;
+        }
+
+        .datos h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .datos p {
+            color: var(--texto-tenue);
+            font-size: 13px;
+        }
+
+        /* =====================
+           2.7 APLICACIÓN
+        ===================== */
+
+        .aplicacion {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .ejemplo-interfaz {
+            background: var(--superficie-alta);
+            border: 1px solid var(--borde);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .ejemplo-interfaz h3 {
+            margin-bottom: 15px;
+        }
+
+        .boton {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background: var(--color-marca);
+            color: white;
+            font-weight: bold;
+        }
+
+        .tarjeta {
+            background: var(--color-marca-suave);
+            color: var(--superficie);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .estado-error {
+            background: var(--error);
+            color: white;
+            padding: 12px;
+            border-radius: 7px;
+        }
+
+        /* =====================
+           RESPONSIVE
+        ===================== */
+
+        @media (max-width: 800px) {
+
+            .paleta {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .aplicacion {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .paleta,
+            .contraste {
+                grid-template-columns: 1fr;
+            }
+
+            .barra {
+                height: auto;
+                flex-direction: column;
+            }
+
+            .sesenta,
+            .treinta,
+            .diez {
+                width: 100%;
+                min-width: 0;
+                min-height: 90px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="contenedor">
+
+    <h1>ERK TECH</h1>
+
+    <p class="introduccion">
+        Identidad visual, paleta cromática, contraste y accesibilidad
+    </p>
+
+
+    <!-- =====================
+         2.1 IDENTIDAD VISUAL
+    ===================== -->
+
+    <section class="identidad">
+
+        <h2>2.1 Identidad visual</h2>
+
+        <br>
+
+        <img
+            src="assets/img/logo.png"
+            alt="Logotipo de ERK TECH"
+        >
+
+        <p>
+            Logotipo definido para representar la identidad visual
+            de ERK TECH y establecer los colores principales de
+            la interfaz.
+        </p>
+
+    </section>
+
+
+    <!-- =====================
+         2.2 PALETA CROMÁTICA
+    ===================== -->
+
+    <section class="seccion">
+
+        <h2>2.2 Paleta cromática</h2>
+
+        <p class="descripcion">
+            Colores seleccionados para la identidad visual de ERK TECH
+            y su aplicación dentro de los diferentes componentes.
+        </p>
+
+
+        <div class="paleta">
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#0B0F14"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Azul oscuro</h3>
+
+                    <p class="hex">#0B0F14</p>
+
+                    <p class="uso">
+                        Fondo principal
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#111820"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Azul grisáceo oscuro</h3>
+
+                    <p class="hex">#111820</p>
+
+                    <p class="uso">
+                        Tarjetas y paneles
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#26384A"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Azul grisáceo</h3>
+
+                    <p class="hex">#26384A</p>
+
+                    <p class="uso">
+                        Bordes y separadores
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#0066FF"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Azul marca</h3>
+
+                    <p class="hex">#0066FF</p>
+
+                    <p class="uso">
+                        Identidad principal
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#DCEBFF"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Azul claro</h3>
+
+                    <p class="hex">#DCEBFF</p>
+
+                    <p class="uso">
+                        Fondos destacados
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#008CFF"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Azul acción</h3>
+
+                    <p class="hex">#008CFF</p>
+
+                    <p class="uso">
+                        Botones y acciones
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#00B8FF"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Azul acento</h3>
+
+                    <p class="hex">#00B8FF</p>
+
+                    <p class="uso">
+                        Elementos destacados
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#FFFFFF"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Blanco</h3>
+
+                    <p class="hex">#FFFFFF</p>
+
+                    <p class="uso">
+                        Texto principal
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#C7D0D9"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Gris claro</h3>
+
+                    <p class="hex">#C7D0D9</p>
+
+                    <p class="uso">
+                        Texto secundario
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#2E9B57"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Verde</h3>
+
+                    <p class="hex">#2E9B57</p>
+
+                    <p class="uso">
+                        Éxito
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#B87900"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Amarillo oscuro</h3>
+
+                    <p class="hex">#B87900</p>
+
+                    <p class="uso">
+                        Advertencia
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#D32F2F"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Rojo</h3>
+
+                    <p class="hex">#D32F2F</p>
+
+                    <p class="uso">
+                        Error
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="color">
+
+                <div
+                    class="muestra"
+                    style="background:#087EA4"
+                ></div>
+
+                <div class="informacion">
+
+                    <h3>Azul verdoso</h3>
+
+                    <p class="hex">#087EA4</p>
+
+                    <p class="uso">
+                        Información
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         2.3 60-30-10
+    ===================== -->
+
+    <section class="seccion">
+
+        <h2>2.3 Regla 60-30-10</h2>
+
+        <p class="descripcion">
+            Distribución propuesta de los colores de la identidad
+            visual de ERK TECH.
+        </p>
+
+
+        <div class="barra">
+
+            <div class="bloque sesenta">
+
+                <strong>60%</strong>
+
+                <span>
+                    Superficies
+                </span>
+
+            </div>
+
+
+            <div class="bloque treinta">
+
+                <strong>30%</strong>
+
+                <span>
+                    Elementos secundarios
+                </span>
+
+            </div>
+
+
+            <div class="bloque diez">
+
+                <strong>10%</strong>
+
+                <span>
+                    Marca y acciones
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         2.4 VARIABLES
+    ===================== -->
+
+    <section class="seccion">
+
+        <h2>2.4 Variables de diseño</h2>
+
+        <p class="descripcion">
+            Variables utilizadas para organizar los colores
+            definidos para la interfaz.
+        </p>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Variable</th>
+
+                    <th>Valor</th>
+
+                    <th>Uso</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+                    <td><code>--superficie</code></td>
+                    <td>#0B0F14</td>
+                    <td>Fondo principal</td>
+                </tr>
+
+                <tr>
+                    <td><code>--superficie-alta</code></td>
+                    <td>#111820</td>
+                    <td>Tarjetas y paneles</td>
+                </tr>
+
+                <tr>
+                    <td><code>--borde</code></td>
+                    <td>#26384A</td>
+                    <td>Bordes</td>
+                </tr>
+
+                <tr>
+                    <td><code>--color-marca</code></td>
+                    <td>#0066FF</td>
+                    <td>Identidad de marca</td>
+                </tr>
+
+                <tr>
+                    <td><code>--color-accion</code></td>
+                    <td>#008CFF</td>
+                    <td>Botones</td>
+                </tr>
+
+                <tr>
+                    <td><code>--color-acento</code></td>
+                    <td>#00B8FF</td>
+                    <td>Destacados</td>
+                </tr>
+
+                <tr>
+                    <td><code>--texto</code></td>
+                    <td>#FFFFFF</td>
+                    <td>Texto principal</td>
+                </tr>
+
+                <tr>
+                    <td><code>--texto-tenue</code></td>
+                    <td>#C7D0D9</td>
+                    <td>Texto secundario</td>
+                </tr>
+
+                <tr>
+                    <td><code>--exito</code></td>
+                    <td>#2E9B57</td>
+                    <td>Éxito</td>
+                </tr>
+
+                <tr>
+                    <td><code>--advertencia</code></td>
+                    <td>#B87900</td>
+                    <td>Advertencia</td>
+                </tr>
+
+                <tr>
+                    <td><code>--error</code></td>
+                    <td>#D32F2F</td>
+                    <td>Error</td>
+                </tr>
+
+                <tr>
+                    <td><code>--info</code></td>
+                    <td>#087EA4</td>
+                    <td>Información</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- =====================
+         2.6 CONTRASTE
+    ===================== -->
+
+    <section class="seccion">
+
+        <h2>2.6 Contraste y accesibilidad</h2>
+
+        <p class="descripcion">
+            Combinaciones de colores seleccionadas para revisar
+            la legibilidad de los elementos de la interfaz.
+        </p>
+
+
+        <div class="contraste">
+
+
+            <div class="contraste-card">
+
+                <div class="ejemplo blanco fondo-oscuro">
+                    Texto principal
+                </div>
+
+                <div class="datos">
+
+                    <h3>
+                        Blanco sobre superficie
+                    </h3>
+
+                    <p>
+                        Texto: #FFFFFF
+                    </p>
+
+                    <p>
+                        Fondo: #0B0F14
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contraste-card">
+
+                <div class="ejemplo gris fondo-oscuro">
+                    Texto secundario
+                </div>
+
+                <div class="datos">
+
+                    <h3>
+                        Gris sobre superficie
+                    </h3>
+
+                    <p>
+                        Texto: #C7D0D9
+                    </p>
+
+                    <p>
+                        Fondo: #0B0F14
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contraste-card">
+
+                <div class="ejemplo blanco fondo-marca">
+                    Texto de marca
+                </div>
+
+                <div class="datos">
+
+                    <h3>
+                        Blanco sobre azul de marca
+                    </h3>
+
+                    <p>
+                        Texto: #FFFFFF
+                    </p>
+
+                    <p>
+                        Fondo: #0066FF
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contraste-card">
+
+                <div class="ejemplo blanco fondo-accion">
+                    Acción
+                </div>
+
+                <div class="datos">
+
+                    <h3>
+                        Blanco sobre azul de acción
+                    </h3>
+
+                    <p>
+                        Texto: #FFFFFF
+                    </p>
+
+                    <p>
+                        Fondo: #008CFF
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contraste-card">
+
+                <div class="ejemplo blanco fondo-error">
+                    Error
+                </div>
+
+                <div class="datos">
+
+                    <h3>
+                        Blanco sobre rojo
+                    </h3>
+
+                    <p>
+                        Texto: #FFFFFF
+                    </p>
+
+                    <p>
+                        Fondo: #D32F2F
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contraste-card">
+
+                <div class="ejemplo oscuro fondo-claro">
+                    Información destacada
+                </div>
+
+                <div class="datos">
+
+                    <h3>
+                        Oscuro sobre azul claro
+                    </h3>
+
+                    <p>
+                        Texto: #0B0F14
+                    </p>
+
+                    <p>
+                        Fondo: #DCEBFF
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         2.7 APLICACIÓN
+    ===================== -->
+
+    <section class="seccion">
+
+        <h2>2.7 Aplicación de la paleta</h2>
+
+        <p class="descripcion">
+            Ejemplos básicos de aplicación de los colores
+            definidos en componentes de una interfaz.
+        </p>
+
+
+        <div class="aplicacion">
+
+
+            <div class="ejemplo-interfaz">
+
+                <h3>
+                    Botón
+                </h3>
+
+                <button class="boton">
+                    Acción principal
+                </button>
+
+            </div>
+
+
+            <div class="ejemplo-interfaz">
+
+                <h3>
+                    Tarjeta
+                </h3>
+
+                <div class="tarjeta">
+
+                    <strong>
+                        Elemento destacado
+                    </strong>
+
+                    <p>
+                        Fondo de marca suave.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="ejemplo-interfaz">
+
+                <h3>
+                    Estado
+                </h3>
+
+                <div class="estado-error">
+
+                    Mensaje de error
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+</body>
+
+</html>

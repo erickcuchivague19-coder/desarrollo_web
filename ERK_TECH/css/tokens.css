@@ -1,0 +1,26 @@
+:root {
+
+    /* Superficies */
+    --superficie: #0B0F14;
+    --superficie-alta: #111820;
+    --borde: #26384A;
+
+    /* Marca */
+    --color-marca: #0066FF;
+    --color-marca-suave: #DCEBFF;
+
+    /* Acciones */
+    --color-accion: #008CFF;
+    --color-acento: #00B8FF;
+
+    /* Texto */
+    --texto: #FFFFFF;
+    --texto-tenue: #C7D0D9;
+
+    /* Estados */
+    --exito: #2E9B57;
+    --advertencia: #B87900;
+    --error: #D32F2F;
+    --info: #087EA4;
+
+}
