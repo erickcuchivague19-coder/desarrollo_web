@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión - ERK TECH</title>
+
+    <title>Inicio de sesión - ERK TECH</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>ERK TECH</h1>
-        <p>Plataforma de gestión tecnológica</p>
-    </header>
+    <main class="login-page">
 
-    <main>
+        <section class="login-container">
 
-        <section>
-            <h2>Iniciar sesión</h2>
+            <header>
+                <img src="assets/img/logo.svg" alt="Logo de ERK TECH">
 
-            <form action="#" method="post">
+                <h1>ERK TECH</h1>
 
-                <fieldset>
+                <p>Inicio de sesión</p>
+            </header>
 
-                    <legend>Credenciales de acceso</legend>
+            <form>
 
-                    <label for="correo">
-                        Correo electrónico
-                    </label>
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
 
                     <input
-                        type="email"
-                        id="correo"
-                        name="correo"
+                        type="text"
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Ingrese su usuario"
                         required
                     >
+                </div>
 
-                    <label for="password">
-                        Contraseña
-                    </label>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
 
                     <input
                         type="password"
                         id="password"
                         name="password"
+                        placeholder="Ingrese su contraseña"
                         required
-                        minlength="8"
                     >
+                </div>
 
-                </fieldset>
-
-                <button type="submit">
+                <button type="submit" class="boton">
                     Iniciar sesión
                 </button>
 
@@ -60,10 +59,5 @@
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 ERK TECH. </p>
-    </footer>
-
 </body>
-
 </html>
