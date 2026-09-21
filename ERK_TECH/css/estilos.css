@@ -1,5 +1,10 @@
-/* 1. VARIABLES DE MARCA */
+/* =========================================================
+   ERK TECH - ESTILOS GENERALES
+   DÍA 4 Y DÍA 5
+   ========================================================= */
 
+
+/* 1. VARIABLES DE MARCA */
 
 :root {
     --color-marca: hsl(215, 90%, 35%);
@@ -7,17 +12,12 @@
     --color-accion: hsl(215, 90%, 45%);
     --color-acento: hsl(215, 90%, 65%);
 
-
     --superficie: hsl(210, 20%, 97%);
     --superficie-blanca: hsl(0, 0%, 100%);
 
-
     --texto: hsl(215, 30%, 15%);
     --texto-secundario: hsl(215, 15%, 40%);
-
-
     --borde: hsl(215, 20%, 85%);
-
 
     --radio: 8px;
     --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -26,7 +26,6 @@
 
 /* 2. MODELO DE CAJA */
 
-
 *,
 *::before,
 *::after {
@@ -34,15 +33,11 @@
 }
 
 
-
-
 /* 3. ESTILOS GENERALES */
-
 
 html {
     font-size: 16px;
 }
-
 
 body {
     margin: 0;
@@ -54,10 +49,7 @@ body {
 }
 
 
-
-
 /* 4. TIPOGRAFÍA */
-
 
 h1,
 h2,
@@ -67,13 +59,11 @@ h4 {
     color: var(--color-marca-oscuro);
 }
 
-
 h1 {
     font-size: 2rem;
     line-height: 1.2;
     margin-bottom: 0.75rem;
 }
-
 
 h2 {
     font-size: 1.6rem;
@@ -81,48 +71,29 @@ h2 {
     margin-bottom: 0.7rem;
 }
 
-
 h3 {
     font-size: 1.35rem;
     line-height: 1.4;
 }
-
-
-h4 {
-    font-size: 1.15rem;
-}
-
 
 p {
     max-width: 70ch;
 }
 
 
-small {
-    font-size: 0.875rem;
-}
-
-
-
-
-/*  5. ENLACES */
-
+/* 5. ENLACES */
 
 a {
     color: var(--color-marca);
     text-decoration: none;
 }
 
-
 a:hover {
     text-decoration: underline;
 }
 
 
-
-
 /* 6. BOTONES */
-
 
 button,
 .boton {
@@ -134,15 +105,12 @@ button,
     color: white;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.18s ease;
 }
-
 
 button:hover,
 .boton:hover {
     background-color: var(--color-marca-oscuro);
 }
-
 
 button:focus-visible,
 .boton:focus-visible {
@@ -151,10 +119,7 @@ button:focus-visible,
 }
 
 
-
-
 /* 7. LOGIN */
-
 
 .login-page {
     min-height: 100vh;
@@ -165,7 +130,6 @@ button:focus-visible,
     background-color: var(--superficie);
 }
 
-
 .login-container {
     width: min(100%, 420px);
     padding: 2rem;
@@ -175,12 +139,10 @@ button:focus-visible,
     box-shadow: var(--sombra);
 }
 
-
 .login-container header {
     text-align: center;
     margin-bottom: 1.5rem;
 }
-
 
 .login-container img {
     max-width: 180px;
@@ -188,18 +150,15 @@ button:focus-visible,
     margin-bottom: 1rem;
 }
 
-
 .login-container form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-
 .login-container label {
     font-weight: 600;
 }
-
 
 .login-container input {
     width: 100%;
@@ -210,26 +169,11 @@ button:focus-visible,
 }
 
 
-.login-container input:focus {
-    border-color: var(--color-accion);
-}
-
-
-.login-container input:focus-visible {
-    outline: 3px solid var(--color-acento);
-    outline-offset: 2px;
-}
-
-
-
-
 /* 8. FORMULARIOS */
-
 
 form {
     max-width: 700px;
 }
-
 
 .form-group {
     display: flex;
@@ -238,24 +182,16 @@ form {
     margin-bottom: 1rem;
 }
 
-
 input,
 select,
 textarea {
     font-family: inherit;
     font-size: 1rem;
-}
-
-
-input,
-select,
-textarea {
     padding: 0.7rem;
     border: 1px solid var(--borde);
     border-radius: var(--radio);
     background-color: var(--superficie-blanca);
 }
-
 
 input:focus-visible,
 select:focus-visible,
@@ -265,16 +201,12 @@ textarea:focus-visible {
 }
 
 
-
-
-/* 9. TABLA DE PRODUCTOS */
-
+/* 9. TABLAS */
 
 .table-container {
     width: 100%;
     overflow-x: auto;
 }
-
 
 table {
     width: 100%;
@@ -282,12 +214,10 @@ table {
     background-color: var(--superficie-blanca);
 }
 
-
 thead {
     background-color: var(--color-marca);
     color: white;
 }
-
 
 th,
 td {
@@ -296,21 +226,16 @@ td {
     border-bottom: 1px solid var(--borde);
 }
 
-
 tbody tr:nth-child(even) {
     background-color: hsl(215, 30%, 97%);
 }
-
 
 tbody tr:hover {
     background-color: hsl(215, 50%, 92%);
 }
 
 
-
-
-/*  10. TARJETAS */
-
+/* 10. TARJETAS */
 
 .card {
     padding: 1.5rem;
@@ -321,26 +246,7 @@ tbody tr:hover {
 }
 
 
-
-
-/* 11. ENCABEZADO */
-
-
-header {
-    padding: 1rem;
-}
-
-
-.logo {
-    max-width: 180px;
-    height: auto;
-}
-
-
-
-
-/* 12. CONTENEDOR */
-
+/* 11. CONTENEDOR */
 
 .container {
     width: min(100% - 2rem, 1200px);
@@ -348,63 +254,296 @@ header {
 }
 
 
+/* =========================================================
+   DÍA 5 - BARRA SUPERIOR
+   ========================================================= */
 
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-marca);
+    color: white;
+    box-shadow: var(--sombra);
+}
 
-/* 13. ESTADOS */
+.header-content {
+    width: min(100% - 2rem, 1400px);
+    min-height: 90px;
+    margin-inline: auto;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
 
-button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+.brand h1 {
+    margin: 0;
+    color: white;
+}
+
+.brand p {
+    margin: 0;
+    color: white;
 }
 
 
+/* NAVEGACIÓN SUPERIOR */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: white;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    color: var(--color-acento);
+    text-decoration: none;
+}
 
 
-/* 14. RESPONSIVE BÁSICO  */
+/* =========================================================
+   DÍA 5 - GRID PRINCIPAL
+   ========================================================= */
 
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    min-height: calc(100vh - 150px);
+}
+
+
+/* =========================================================
+   MENÚ LATERAL
+   ========================================================= */
+
+.sidebar {
+    width: 240px;
+    padding: 1.5rem;
+    background-color: var(--superficie-blanca);
+    border-right: 1px solid var(--borde);
+}
+
+.sidebar h2 {
+    margin-bottom: 1rem;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.sidebar a {
+    display: block;
+    padding: 0.7rem;
+    border-radius: var(--radio);
+    color: var(--texto);
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    background-color: var(--superficie);
+    text-decoration: none;
+    color: var(--color-marca);
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
+
+.dashboard-main {
+    min-width: 0;
+    padding: 2rem;
+}
+
+.dashboard-intro {
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================================
+   DÍA 5 - CUATRO TARJETAS CON AUTO-FIT
+   ========================================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.dashboard-card {
+    padding: 1.5rem;
+    background-color: var(--superficie-blanca);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.dashboard-card h3 {
+    margin-top: 0;
+    color: var(--color-marca-oscuro);
+}
+
+.dashboard-number {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-marca);
+}
+
+
+/* =========================================================
+   TABLA DE ACTIVIDADES
+   ========================================================= */
+
+.table-section {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.table-section h2 {
+    margin-bottom: 1rem;
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+
+.site-footer {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--color-marca-oscuro);
+    color: white;
+}
+
+.site-footer p {
+    max-width: none;
+    margin: 0;
+}
+
+
+/* =========================================================
+   DISEÑO RESPONSIVE
+   ========================================================= */
+
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .dashboard-grid {
+        grid-template-columns:
+            repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+}
+
+
+/* PANTALLAS PEQUEÑAS */
 
 @media (max-width: 768px) {
 
-
-    .login-page {
-        padding: 1rem;
+    .header-content {
+        flex-wrap: wrap;
+        padding: 1rem 0;
     }
 
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 
-    .login-container {
+    .dashboard-main {
         padding: 1.5rem;
     }
 
+}
 
-    h1 {
-        font-size: 1.7rem;
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        position: sticky;
+        top: 0;
     }
 
-
-    h2 {
-        font-size: 1.4rem;
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
     }
 
+    .main-nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
 
-    th,
-    td {
-        padding: 0.6rem;
+    .main-nav a {
+        font-size: 0.9rem;
+    }
+
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 1rem;
+        border-right: none;
+        border-bottom: 1px solid var(--borde);
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .sidebar nav a {
+        padding: 0.5rem 0.7rem;
+    }
+
+    .dashboard-main {
+        padding: 1rem;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .dashboard-card {
+        padding: 1rem;
+    }
+
+    .table-section {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    .site-footer {
+        text-align: center;
+        padding: 1rem;
     }
 }
 
-
-.enlace {
-    color: blue;
-}
-
-
-#menu a {
-    color: red;
-}
-
-
-#menu .enlace {
-    color: green;
-}
 
