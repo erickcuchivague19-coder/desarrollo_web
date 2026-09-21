@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biblioteca de componentes de ERK TECH">
+    <title>Componentes - ERK TECH</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-content">
+
+            <a href="dashboard.html" class="logo">
+                ERK TECH
+            </a>
+
+            <button class="boton-menu" type="button" aria-label="Abrir menú">
+                ☰ Menú
+            </button>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="productos.html">Productos</a>
+                <a href="componentes.html">Componentes</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="dashboard-main">
+
+        <header>
+            <h1>Biblioteca de componentes</h1>
+            <p>
+                Componentes visuales y estados utilizados en el proyecto ERK TECH.
+                Los contenidos de esta página son únicamente demostrativos.
+            </p>
+        </header>
+
+
+        <!-- BOTONES -->
+
+        <section class="dashboard-card">
+            <h2>1. Botones</h2>
+
+            <p>Botón primario:</p>
+
+            <button class="boton-primario">
+                Primario
+            </button>
+
+            <p>Botón secundario:</p>
+
+            <button class="boton-secundario">
+                Secundario
+            </button>
+
+            <p>Botón peligro:</p>
+
+            <button class="boton-peligro">
+                Peligro
+            </button>
+
+            <p>Botón deshabilitado:</p>
+
+            <button class="boton-primario" disabled>
+                Deshabilitado
+            </button>
+        </section>
+
+
+        <!-- FORMULARIOS -->
+
+        <section class="dashboard-card">
+            <h2>2. Campos de formulario</h2>
+
+            <form class="formulario">
+
+                <div class="formulario-grupo">
+                    <label for="nombre">Nombre</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Campo de ejemplo"
+                    >
+                </div>
+
+
+                <div class="formulario-grupo">
+
+                    <label for="correo">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        class="campo-error"
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        value="correo-de-prueba"
+                        aria-describedby="mensaje-error"
+                    >
+
+                    <p
+                        class="mensaje-error"
+                        id="mensaje-error"
+                    >
+                        Este campo contiene un error de demostración.
+                    </p>
+
+                </div>
+
+            </form>
+        </section>
+
+
+        <!-- TARJETA -->
+
+        <section class="dashboard-card">
+
+            <h2>3. Tarjeta de indicador</h2>
+
+            <article class="dashboard-card">
+
+                <h3>Productos</h3>
+
+                <p class="dashboard-number">
+                    --
+                </p>
+
+                <p>
+                    Indicador de ejemplo
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- TABLA -->
+
+        <section class="dashboard-card">
+
+            <h2>4. Tabla de datos</h2>
+
+            <div class="table-section">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Código</th>
+                            <th>Elemento</th>
+                            <th>Estado</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>01</td>
+                            <td>Registro de ejemplo</td>
+                            <td>Activo</td>
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>Registro de prueba</td>
+                            <td>Pendiente</td>
+                        </tr>
+
+                        <tr>
+                            <td>03</td>
+                            <td>Actividad de demostración</td>
+                            <td>Activo</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALERTA -->
+
+        <section class="dashboard-card">
+
+            <h2>5. Mensaje de alerta</h2>
+
+            <div class="alerta">
+                <strong>Información:</strong>
+                Este es un mensaje de demostración.
+            </div>
+
+            <div class="alerta alerta-advertencia">
+                <strong>Atención:</strong>
+                Este es un aviso de demostración.
+            </div>
+
+        </section>
+
+
+        <!-- MODAL -->
+
+        <section class="dashboard-card">
+
+            <h2>6. Ventana modal</h2>
+
+            <div class="modal">
+
+                <h3>Confirmación</h3>
+
+                <p>
+                    Esta es una ventana modal de demostración.
+                </p>
+
+                <div class="modal-acciones">
+
+                    <button class="boton-secundario">
+                        Cancelar
+                    </button>
+
+                    <button class="boton-primario">
+                        Aceptar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTADOS -->
+
+        <section class="dashboard-card">
+
+            <h2>7. Estados de los componentes</h2>
+
+            <p>
+                Los componentes interactivos del proyecto contemplan
+                los estados normal, hover, focus-visible, activo y
+                deshabilitado.
+            </p>
+
+            <div class="modal-acciones">
+
+                <button class="boton-primario">
+                    Normal
+                </button>
+
+                <button class="boton-secundario">
+                    Prueba hover
+                </button>
+
+                <button class="boton-peligro" disabled>
+                    Deshabilitado
+                </button>
+
+            </div>
+
+            <p>
+                El estado hover se puede observar colocando el cursor
+                sobre los botones y el estado focus-visible utilizando
+                el teclado.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <p>
+            ERK TECH - Biblioteca de componentes
+        </p>
+
+    </footer>
+
+</body>
+</html>
