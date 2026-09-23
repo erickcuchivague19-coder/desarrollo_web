@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dashboard de ERK TECH">
+
+    <meta
+        name="description"
+        content="Dashboard de ERK TECH">
+
     <title>Dashboard - ERK TECH</title>
 
     <link rel="stylesheet" href="css/estilos.css">
@@ -11,248 +16,505 @@
 
 <body>
 
-    <!-- BARRA SUPERIOR -->
+    <!-- =========================================
+         BARRA SUPERIOR
+         ========================================= -->
+
     <header class="site-header">
+
         <div class="header-content">
 
             <div class="brand">
                 <h1>ERK TECH</h1>
-                <p>Panel de control</p>
             </div>
 
-            <nav class="main-nav" aria-label="Navegación principal">
-                <a href="dashboard.html">Dashboard</a>
-                <a href="productos.html">Productos</a>
-                <a href="login.html">Cerrar sesión</a>
+            <nav
+                class="main-nav"
+                aria-label="Navegación principal">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="productos.html">
+                    Productos
+                </a>
+
+                <a href="componentes.html">
+                    Componentes
+                </a>
+
+                <a href="login.html">
+                    Cerrar sesión
+                </a>
+
             </nav>
 
         </div>
+
     </header>
 
 
-    <!-- ESTRUCTURA PRINCIPAL -->
+    <!-- =========================================
+         BOTÓN DEL MENÚ
+         ========================================= -->
+
+    <button
+        type="button"
+        class="boton-menu"
+        id="boton-menu"
+        aria-label="Abrir menú"
+        aria-controls="menu-lateral"
+        aria-expanded="false">
+
+        ☰
+
+    </button>
+
+
+    <!-- =========================================
+         ESTRUCTURA PRINCIPAL
+         ========================================= -->
+
     <div class="dashboard-layout">
 
-        <!-- MENÚ LATERAL -->
-        <aside class="sidebar">
 
-            <h2>Menú</h2>
+        <!-- =====================================
+             MENÚ LATERAL
+             ===================================== -->
 
-            <nav aria-label="Menú lateral">
-                <a href="dashboard.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="#">Reportes</a>
-                <a href="#">Configuración</a>
+        <aside
+            class="sidebar"
+            id="menu-lateral">
+
+            <div class="sidebar-header">
+
+                <h2>Menú</h2>
+
+            </div>
+
+
+            <nav
+                class="sidebar-nav"
+                aria-label="Menú lateral">
+
+
+                <!-- INICIO -->
+
+                <a
+                    href="dashboard.html"
+                    class="menu-item activo">
+
+                    <span
+                        class="menu-icon"
+                        aria-hidden="true">
+                        ⌂
+                    </span>
+
+                    <span>
+                        Inicio
+                    </span>
+
+                </a>
+
+
+                <!-- PRODUCTOS -->
+
+                <a
+                    href="productos.html"
+                    class="menu-item">
+
+                    <span
+                        class="menu-icon"
+                        aria-hidden="true">
+                        ▣
+                    </span>
+
+                    <span>
+                        Productos
+                    </span>
+
+                </a>
+
+
+                <!-- COMPONENTES -->
+
+                <a
+                    href="componentes.html"
+                    class="menu-item">
+
+                    <span
+                        class="menu-icon"
+                        aria-hidden="true">
+                        ◈
+                    </span>
+
+                    <span>
+                        Componentes
+                    </span>
+
+                </a>
+
+
+                <!-- REPORTES -->
+
+                <a
+                    href="#"
+                    class="menu-item">
+
+                    <span
+                        class="menu-icon"
+                        aria-hidden="true">
+                        ▤
+                    </span>
+
+                    <span>
+                        Reportes
+                    </span>
+
+                </a>
+
+
+                <!-- CONFIGURACIÓN -->
+
+                <a
+                    href="#"
+                    class="menu-item">
+
+                    <span
+                        class="menu-icon"
+                        aria-hidden="true">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Configuración
+                    </span>
+
+                </a>
+
             </nav>
 
         </aside>
 
 
-        <!-- CONTENIDO PRINCIPAL -->
+        <!-- =====================================
+             CONTENIDO PRINCIPAL
+             ===================================== -->
+
         <main class="dashboard-main">
 
+
+            <!-- INTRODUCCIÓN -->
+
             <section class="dashboard-intro">
-                <h2>Dashboard</h2>
+
+                <h2>
+                    Dashboard
+                </h2>
+
                 <p>
                     Resumen general de la información de ERK TECH.
                 </p>
-            </section>
-
-
-            <!-- TARJETAS DE INDICADORES -->
-            <section class="dashboard-grid" aria-label="Indicadores">
-
-                <article class="dashboard-card">
-                    <h3>Productos</h3>
-                    <p class="dashboard-number">120</p>
-                    <p>Productos registrados</p>
-                </article>
-
-                <article class="dashboard-card">
-                    <h3>Ventas</h3>
-                    <p class="dashboard-number">85</p>
-                    <p>Ventas realizadas</p>
-                </article>
-
-                <article class="dashboard-card">
-                    <h3>Clientes</h3>
-                    <p class="dashboard-number">64</p>
-                    <p>Clientes registrados</p>
-                </article>
-
-                <article class="dashboard-card">
-                    <h3>Pedidos</h3>
-                    <p class="dashboard-number">32</p>
-                    <p>Pedidos pendientes</p>
-                </article>
 
             </section>
 
 
-            <!-- TABLA LARGA -->
+            <!-- =================================
+                 TARJETAS DE INDICADORES
+                 ================================= -->
+
+            <section
+                class="dashboard-grid"
+                aria-label="Indicadores">
+
+
+                <!-- PRODUCTOS -->
+
+                <article class="dashboard-card">
+
+                    <h3>
+                        Productos
+                    </h3>
+
+                    <p class="dashboard-number">
+                        120
+                    </p>
+
+                    <p>
+                        Productos registrados
+                    </p>
+
+                </article>
+
+
+                <!-- VENTAS -->
+
+                <article class="dashboard-card">
+
+                    <h3>
+                        Ventas
+                    </h3>
+
+                    <p class="dashboard-number">
+                        85
+                    </p>
+
+                    <p>
+                        Ventas realizadas
+                    </p>
+
+                </article>
+
+
+                <!-- CLIENTES -->
+
+                <article class="dashboard-card">
+
+                    <h3>
+                        Clientes
+                    </h3>
+
+                    <p class="dashboard-number">
+                        64
+                    </p>
+
+                    <p>
+                        Clientes registrados
+                    </p>
+
+                </article>
+
+
+                <!-- PEDIDOS -->
+
+                <article class="dashboard-card">
+
+                    <h3>
+                        Pedidos
+                    </h3>
+
+                    <p class="dashboard-number">
+                        32
+                    </p>
+
+                    <p>
+                        Pedidos pendientes
+                    </p>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================
+                 TABLA DE ACTIVIDADES
+                 ================================= -->
+
             <section class="table-section">
 
-                <h2>Registro de actividades</h2>
+                <h2>
+                    Registro de actividades
+                </h2>
+
 
                 <div class="table-container">
 
                     <table>
 
                         <thead>
+
                             <tr>
-                                <th>ID</th>
-                                <th>Actividad</th>
-                                <th>Usuario</th>
-                                <th>Fecha</th>
-                                <th>Estado</th>
+
+                                <th>
+                                    ID
+                                </th>
+
+                                <th>
+                                    Actividad
+                                </th>
+
+                                <th>
+                                    Usuario
+                                </th>
+
+                                <th>
+                                    Fecha
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
                             </tr>
+
                         </thead>
+
 
                         <tbody>
 
+
                             <tr>
-                                <td>001</td>
+                                <td>01</td>
                                 <td>Registro de producto</td>
-                                <td>Administrador</td>
+                                <td>Usuario 01</td>
                                 <td>01/09/2026</td>
                                 <td>Completado</td>
                             </tr>
 
+
                             <tr>
-                                <td>002</td>
-                                <td>Actualización de producto</td>
-                                <td>Administrador</td>
+                                <td>02</td>
+                                <td>Actualización de inventario</td>
+                                <td>Usuario 02</td>
                                 <td>02/09/2026</td>
                                 <td>Completado</td>
                             </tr>
 
+
                             <tr>
-                                <td>003</td>
+                                <td>03</td>
                                 <td>Registro de cliente</td>
-                                <td>Usuario 01</td>
+                                <td>Usuario 03</td>
                                 <td>03/09/2026</td>
                                 <td>Completado</td>
                             </tr>
 
+
                             <tr>
-                                <td>004</td>
+                                <td>04</td>
                                 <td>Creación de pedido</td>
-                                <td>Usuario 02</td>
+                                <td>Usuario 04</td>
                                 <td>04/09/2026</td>
                                 <td>Pendiente</td>
                             </tr>
 
+
                             <tr>
-                                <td>005</td>
-                                <td>Actualización de pedido</td>
-                                <td>Usuario 03</td>
+                                <td>05</td>
+                                <td>Actualización de producto</td>
+                                <td>Usuario 05</td>
                                 <td>05/09/2026</td>
                                 <td>Completado</td>
                             </tr>
 
+
                             <tr>
-                                <td>006</td>
-                                <td>Registro de producto</td>
-                                <td>Administrador</td>
+                                <td>06</td>
+                                <td>Consulta de inventario</td>
+                                <td>Usuario 06</td>
                                 <td>06/09/2026</td>
                                 <td>Completado</td>
                             </tr>
 
-                            <tr>
-                                <td>007</td>
-                                <td>Actualización de cliente</td>
-                                <td>Usuario 04</td>
-                                <td>07/09/2026</td>
-                                <td>Pendiente</td>
-                            </tr>
 
                             <tr>
-                                <td>008</td>
-                                <td>Creación de pedido</td>
-                                <td>Usuario 05</td>
-                                <td>08/09/2026</td>
+                                <td>07</td>
+                                <td>Registro de venta</td>
+                                <td>Usuario 07</td>
+                                <td>07/09/2026</td>
                                 <td>Completado</td>
                             </tr>
 
+
                             <tr>
-                                <td>009</td>
+                                <td>08</td>
+                                <td>Actualización de cliente</td>
+                                <td>Usuario 08</td>
+                                <td>08/09/2026</td>
+                                <td>Pendiente</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>09</td>
                                 <td>Registro de producto</td>
-                                <td>Administrador</td>
+                                <td>Usuario 09</td>
                                 <td>09/09/2026</td>
                                 <td>Completado</td>
                             </tr>
 
-                            <tr>
-                                <td>010</td>
-                                <td>Actualización de producto</td>
-                                <td>Usuario 06</td>
-                                <td>10/09/2026</td>
-                                <td>Pendiente</td>
-                            </tr>
 
                             <tr>
-                                <td>011</td>
-                                <td>Registro de cliente</td>
-                                <td>Usuario 07</td>
+                                <td>10</td>
+                                <td>Consulta de ventas</td>
+                                <td>Usuario 10</td>
+                                <td>10/09/2026</td>
+                                <td>Completado</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>11</td>
+                                <td>Actualización de inventario</td>
+                                <td>Usuario 11</td>
                                 <td>11/09/2026</td>
                                 <td>Completado</td>
                             </tr>
 
-                            <tr>
-                                <td>012</td>
-                                <td>Creación de pedido</td>
-                                <td>Usuario 08</td>
-                                <td>12/09/2026</td>
-                                <td>Completado</td>
-                            </tr>
 
                             <tr>
-                                <td>013</td>
-                                <td>Actualización de producto</td>
-                                <td>Administrador</td>
+                                <td>12</td>
+                                <td>Registro de pedido</td>
+                                <td>Usuario 12</td>
+                                <td>12/09/2026</td>
+                                <td>Pendiente</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>13</td>
+                                <td>Registro de cliente</td>
+                                <td>Usuario 13</td>
                                 <td>13/09/2026</td>
                                 <td>Completado</td>
                             </tr>
 
-                            <tr>
-                                <td>014</td>
-                                <td>Registro de cliente</td>
-                                <td>Usuario 09</td>
-                                <td>14/09/2026</td>
-                                <td>Pendiente</td>
-                            </tr>
 
                             <tr>
-                                <td>015</td>
-                                <td>Creación de pedido</td>
-                                <td>Usuario 10</td>
+                                <td>14</td>
+                                <td>Actualización de producto</td>
+                                <td>Usuario 14</td>
+                                <td>14/09/2026</td>
+                                <td>Completado</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>15</td>
+                                <td>Consulta de inventario</td>
+                                <td>Usuario 15</td>
                                 <td>15/09/2026</td>
                                 <td>Completado</td>
                             </tr>
 
-                            <tr>
-                                <td>016</td>
-                                <td>Registro de producto</td>
-                                <td>Administrador</td>
-                                <td>16/09/2026</td>
-                                <td>Completado</td>
-                            </tr>
 
                             <tr>
-                                <td>017</td>
-                                <td>Actualización de cliente</td>
-                                <td>Usuario 11</td>
-                                <td>17/09/2026</td>
+                                <td>16</td>
+                                <td>Registro de venta</td>
+                                <td>Usuario 16</td>
+                                <td>16/09/2026</td>
                                 <td>Pendiente</td>
                             </tr>
 
+
                             <tr>
-                                <td>018</td>
-                                <td>Creación de pedido</td>
-                                <td>Usuario 12</td>
+                                <td>17</td>
+                                <td>Actualización de cliente</td>
+                                <td>Usuario 17</td>
+                                <td>17/09/2026</td>
+                                <td>Completado</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>18</td>
+                                <td>Consulta de reportes</td>
+                                <td>Usuario 18</td>
                                 <td>18/09/2026</td>
                                 <td>Completado</td>
                             </tr>
+
 
                         </tbody>
 
@@ -262,16 +524,32 @@
 
             </section>
 
+
         </main>
 
     </div>
 
 
-    <!-- PIE DE PÁGINA -->
+    <!-- =========================================
+         PIE DE PÁGINA
+         ========================================= -->
+
     <footer class="site-footer">
-        <p>&copy; 2026 ERK TECH. Todos los derechos reservados.</p>
+
+        <p>
+            &copy; 2026 ERK TECH.
+            Todos los derechos reservados.
+        </p>
+
     </footer>
 
-</body>
-</html>
 
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <script src="js/menu.js"></script>
+
+</body>
+
+</html>

@@ -598,7 +598,7 @@ tbody tr:hover {
 }
 
 
-/* =========================================================
+    /* =========================================================
    20. REDUCCIÓN DE MOVIMIENTO
    ========================================================= */
 
@@ -612,4 +612,297 @@ tbody tr:hover {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+}
+
+/* =========================================
+   ERK TECH - DASHBOARD DÍA 8
+   MENÚ LATERAL
+   ========================================= */
+
+
+/* =========================================
+   ESTRUCTURA PRINCIPAL
+   ========================================= */
+
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: calc(100vh - 100px);
+}
+
+
+/* =========================================
+   MENÚ LATERAL
+   ========================================= */
+
+.sidebar {
+    width: 240px;
+    min-height: 100%;
+    padding: 25px 15px;
+
+    background: var(--color-marca-oscuro);
+    color: white;
+
+    box-sizing: border-box;
+}
+
+
+.sidebar-header {
+    padding: 0 10px 20px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+}
+
+
+.sidebar-header h2 {
+    margin: 0;
+    color: white;
+}
+
+
+/* =========================================
+   OPCIONES DEL MENÚ
+   ========================================= */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+.menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    color: white;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.menu-item:hover {
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    transform: translateX(3px);
+}
+
+
+.menu-item:focus-visible {
+    outline:
+        3px solid
+        var(--color-acento);
+
+    outline-offset: 2px;
+}
+
+
+.menu-item.activo {
+    background:
+        var(--color-accion);
+}
+
+
+.menu-icon {
+    width: 22px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CONTENIDO DEL DASHBOARD
+   ========================================= */
+
+.dashboard-main {
+    min-width: 0;
+
+    padding: 25px;
+}
+
+
+/* =========================================
+   BOTÓN ☰
+   ========================================= */
+
+.boton-menu {
+    position: fixed;
+
+    top: 75px;
+    left: 15px;
+
+    z-index: 2000;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 8px;
+
+    background:
+        var(--color-accion);
+
+    color: white;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.2);
+}
+
+
+.boton-menu:hover {
+    background:
+        var(--color-marca-oscuro);
+}
+
+
+.boton-menu:focus-visible {
+    outline:
+        3px solid
+        var(--color-acento);
+
+    outline-offset: 2px;
+}
+
+
+.boton-menu:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================
+   TABLET Y CELULAR
+   ========================================= */
+
+@media (max-width: 1023px) {
+
+    .dashboard-layout {
+        display: block;
+        min-height: auto;
+    }
+
+
+    .sidebar {
+        display: none;
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+
+    .sidebar.abierto {
+        display: block;
+    }
+
+
+    .dashboard-main {
+        width: 100%;
+
+        padding: 20px;
+
+        box-sizing: border-box;
+    }
+
+
+    .sidebar-nav {
+        margin-top: 15px;
+    }
+
+
+    .menu-item {
+        padding: 13px 15px;
+    }
+
+}
+
+
+/* =========================================
+   COMPUTADOR
+   ========================================= */
+
+@media (min-width: 1024px) {
+
+    .boton-menu {
+        display: none;
+    }
+
+
+    .sidebar {
+        display: block;
+
+        position: sticky;
+
+        top: 0;
+
+        height:
+            calc(100vh - 100px);
+    }
+
+}
+
+/* =========================================
+   MENSAJES DE ERROR 
+   ========================================= */
+
+.mensaje-error {
+    display: block;
+
+    margin-top: 5px;
+
+    min-height: 18px;
+
+    font-size: 0.85rem;
+
+    color: #b00020;
+}
+
+
+.mensaje-error.visible {
+    display: block;
+}
+
+
+/* Campo con error */
+
+.product-form input:invalid,
+.product-form select:invalid {
+    border-color: #b00020;
+}
+
+
+/* Accesibilidad: enfoque visible */
+
+.product-form input:focus-visible,
+.product-form select:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 2px;
 }

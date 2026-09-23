@@ -18,16 +18,19 @@
         </div>
     </header>
 
-<nav id="menu">
-    <a href="#" class="enlace">Inicio</a>
-</nav>
+    <nav id="menu">
+        <a href="dashboard.html" class="enlace">Inicio</a>
+        <a href="productos.html" class="enlace">Productos</a>
+        <a href="componentes.html" class="enlace">Componentes</a>
+    </nav>
 
     <main class="container">
 
+        <!-- FORMULARIO -->
         <section>
             <h2>Registrar producto</h2>
 
-            <form class="product-form">
+            <form id="form-producto" class="product-form" novalidate>
 
                 <div class="form-group">
                     <label for="nombre">Nombre del producto</label>
@@ -36,19 +39,32 @@
                         type="text"
                         id="nombre"
                         name="nombre"
+                        minlength="3"
                         required
+                        aria-describedby="error-nombre"
                     >
+
+                    <small id="error-nombre" class="mensaje-error"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="categoria">Categoría</label>
 
-                    <select id="categoria" name="categoria">
+                    <select
+                        id="categoria"
+                        name="categoria"
+                        required
+                        aria-describedby="error-categoria"
+                    >
                         <option value="">Seleccione una categoría</option>
-                        <option value="computadores">Computadores</option>
-                        <option value="celulares">Celulares</option>
-                        <option value="accesorios">Accesorios</option>
+                        <option value="Periféricos">Periféricos</option>
+                        <option value="Pantallas">Pantallas</option>
+                        <option value="Almacenamiento">Almacenamiento</option>
+                        <option value="Componentes">Componentes</option>
+                        <option value="Accesorios">Accesorios</option>
                     </select>
+
+                    <small id="error-categoria" class="mensaje-error"></small>
                 </div>
 
                 <div class="form-group">
@@ -58,9 +74,28 @@
                         type="number"
                         id="precio"
                         name="precio"
-                        min="0"
+                        min="0.01"
                         required
+                        aria-describedby="error-precio"
                     >
+
+                    <small id="error-precio" class="mensaje-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="stock">Stock</label>
+
+                    <input
+                        type="number"
+                        id="stock"
+                        name="stock"
+                        min="0"
+                        step="1"
+                        required
+                        aria-describedby="error-stock"
+                    >
+
+                    <small id="error-stock" class="mensaje-error"></small>
                 </div>
 
                 <button type="submit" class="boton">
@@ -70,12 +105,25 @@
             </form>
         </section>
 
+        <!-- TABLA -->
         <section>
+
             <h2>Productos registrados</h2>
+
+            <div class="form-group">
+                <label for="buscador">Buscar producto</label>
+
+                <input
+                    type="search"
+                    id="buscador"
+                    name="buscador"
+                    placeholder="Buscar por nombre o categoría"
+                >
+            </div>
 
             <div class="table-container">
 
-                <table>
+                <table id="tabla-productos">
 
                     <thead>
                         <tr>
@@ -83,45 +131,28 @@
                             <th>Producto</th>
                             <th>Categoría</th>
                             <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Portátil Lenovo</td>
-                            <td>Computadores</td>
-                            <td>$2.500.000</td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>Mouse inalámbrico</td>
-                            <td>Accesorios</td>
-                            <td>$80.000</td>
-                        </tr>
-
-                        <tr>
-                            <td>3</td>
-                            <td>Teclado mecánico</td>
-                            <td>Accesorios</td>
-                            <td>$180.000</td>
-                        </tr>
-
-                        <tr>
-                            <td>4</td>
-                            <td>Monitor 24"</td>
-                            <td>Monitores</td>
-                            <td>$650.000</td>
-                        </tr>
+                        <!-- JavaScript pintará los productos aquí -->
                     </tbody>
 
                 </table>
 
             </div>
+
         </section>
 
     </main>
+
+    <!-- Primero cargamos los datos -->
+    <script src="js/datos-prueba.js"></script>
+
+    <!-- Después cargamos la lógica del Día 8 -->
+    <script src="js/dom.js"></script>
 
 </body>
 </html>
